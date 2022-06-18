@@ -1,0 +1,14 @@
+prefix=/home/tkakoi/ffmpeg-build/out
+exec_prefix=${prefix}
+libdir=/home/tkakoi/ffmpeg-build/out/lib
+includedir=/home/tkakoi/ffmpeg-build/out/include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 58.91.100
+Requires: 
+Requires.private: libswresample >= 3.7.100, libavutil >= 56.51.100
+Conflicts:
+Libs: -L${libdir}  -lavcodec 
+Libs.private: -lm -LE:/msys64/mingw64/lib -lz -LE:/msys64/mingw64/lib -lfdk-aac -LE:/msys64/mingw64/lib -lopenh264 -lstdc++ -lmfplat -lmfuuid -lole32 -lstrmiids -lole32 -luser32
+Cflags: -I${includedir}
